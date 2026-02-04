@@ -111,6 +111,7 @@ a {
 .menu > a img {
   display: block;
   margin: 0 auto;
+  width: 270px;
 }
 
 .menu a {
@@ -133,8 +134,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -221,12 +222,13 @@ a {
 
 /* WELCOME TITLE */
 .welcome-title {
-  font-size: 20px;
+  font-size: 26px;
   line-height: 1.4;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
   width: 100%;
+  margin-top: 12px;
 }
 
 /* TRENDING SECTION */
@@ -240,11 +242,10 @@ a {
 }
 
 .trending-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 2px;
   margin: 0;
   width: 100%;
   max-width: none;
@@ -253,10 +254,10 @@ a {
 .trending-title::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 65px;
   height: 3px;
   background-color: #b59f5b;
-  margin: 12px auto 24px;
+  margin: 6px auto 24px;
 }
 
 .trending-grid {
@@ -272,15 +273,23 @@ a {
 .trending-card {
   position: relative;
   width: 100%;
-  height: auto;
-  min-height: 260px;
+  height: 230px;
   overflow: hidden;
   cursor: pointer;
 }
 
+.trending-card::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .trending-card img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -289,20 +298,26 @@ a {
   transform: scale(1.05);
 }
 
+@media (max-width: 640px) {
+  .trending-card img {
+    height: 230px;
+  }
+}
+
 .card-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 30px;
+  padding: 30px 20px 15px 20px;
   color: #fff;
 }
 
 .card-content {
   border: 2px solid #b59f5b;
-  padding: 20px;
+  padding: 31px 21px 21px 19px;
 }
 
 .card-content:hover {
@@ -313,10 +328,9 @@ a {
 .card-categories {
   display: flex;
   gap: 15px;
-  margin-bottom: 15px;
-  font-size: 11px;
+  margin-bottom: 10px;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
   font-weight: bold;
 }
 
@@ -325,14 +339,13 @@ a {
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.3;
 }
 
 .page {
-  margin-top: 40px;
+  margin-top: 55px;
 }
 
 .page-wrapper {
@@ -361,7 +374,7 @@ a {
 }
 
 .news:not(:first-child) {
-  margin-top: 40px;
+  margin-top: 52px;
 }
 
 .news-img {
@@ -387,7 +400,7 @@ a {
 .news-teg {
   list-style: none;
   padding: 0;
-  margin: 0 0 15px 0;
+  margin: 0 0 6px 0;
   display: flex;
 }
 
@@ -417,9 +430,9 @@ a {
 .news-name {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
-  margin: 0 0 25px 0;
+  margin: 0 0 10px 0;
   padding: 0;
 }
 
@@ -428,7 +441,7 @@ a {
 }
 
 .news-text-meta {
-  margin: 0 0 23px 0;
+  margin: 0 0 15px 0;
   padding: 0;
 }
 
@@ -461,7 +474,7 @@ a {
   width: 330px;
   max-width: 330px;
   min-width: 0;
-  margin: 40px 15px 0;
+  margin: 75px 15px 0;
   padding: 0;
   order: 2;
   display: flex;
@@ -480,14 +493,15 @@ a {
 }
 
 .aside-item:not(:first-child) {
-  margin-top: 40px;
+  margin-top: 47px;
 }
 
 .top {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  margin-top: -8px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.3;
   width: 100%;
 }
@@ -496,7 +510,7 @@ a {
   content: "";
   display: block;
   position: relative;
-  margin: 14px auto 0;
+  margin: 5px auto 1px;
   width: 66px;
   height: 3px;
   background: #b59f5b;
@@ -504,7 +518,7 @@ a {
 
 .new {
   display: flex;
-  margin-top: 16px;
+  margin-top: 20px;
   width: 100%;
   max-width: 100%;
   justify-content: flex-start;
@@ -517,6 +531,7 @@ a {
   flex-shrink: 0;
   display: block;
   overflow: hidden;
+  margin-top: 2px;
 }
 
 .new a.new-img img {
@@ -553,7 +568,7 @@ a {
 }
 
 .search {
-  margin-top: 28px;
+  margin-top: 65px;
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -576,7 +591,7 @@ a {
 }
 
 .search-button {
-  width: 47px;
+  width: 50px;
   border: none;
   background: url(../svg/search.svg) no-repeat center;
   background-size: 16px;
@@ -590,6 +605,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 38px
 }
 
 .mailing-group {
@@ -598,11 +614,16 @@ a {
 
 .mailing-field {
   width: 100%;
-  border: 3px solid #f4f3f1;
+  background-color: #f4f7f6;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
   padding: 10px 15px;
   font-size: 14px;
-  text-align: center;
   margin-bottom: 14px;
+}
+
+.mailing-field::placeholder {
+  color: #8f8f8f;
 }
 
 .mailing-button {
@@ -621,6 +642,7 @@ a {
   list-style:none;
   display:flex;
   flex-wrap:wrap;
+  margin-top: 25px;
 }
 
 .list-tegs-item {
@@ -647,7 +669,8 @@ a {
 }
 
 .list-theme-item {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
+  margin-top: 10px;
   padding-bottom: 15px;
   border-bottom: 1px solid #f4f3f1;
 }
@@ -672,7 +695,8 @@ a {
 }
 
 .products-section {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 58px; 
   width: 100%;
   background-color: #fff;
   display: flex;
@@ -681,11 +705,10 @@ a {
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 2px;
   margin: 0 auto 30px;
   width: 91.67%;
   max-width: 330px;
@@ -694,7 +717,7 @@ a {
 .section-title::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 65px;
   height: 3px;
   background: #b8a076;
   margin: 12px auto 0;
@@ -738,16 +761,16 @@ a {
 
 .product-content {
   width: 330px;
-  height: 220px;
-  padding: 20px;
-  padding-top: 45px;
+  height: 235px;
+  padding: 15px;
+  padding-top: 50px;
   border: 3px solid #b59f5b;
   background: linear-gradient(to bottom, transparent 25px, #fff 25px);
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 2;
-  margin-top: -25px;
+  margin-top: -40px;
 }
 
 .product-title {
@@ -832,8 +855,11 @@ a {
   padding: 24px 0;
   margin: 0 auto;
   background-color: #f4f7f6;
-  width: auto;
-  max-width: none;
+  max-width: 330px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-list {
@@ -867,12 +893,6 @@ a {
 /* TABLET & DESKTOP (641px+) */
 
 @media (min-width: 641px) {
-  .header {
-    height: auto;
-    padding: 30px 0 124px;
-    margin-bottom: 60px;
-  }
-
   .header-wrapper {
     height: auto;
     display: block;
@@ -887,12 +907,8 @@ a {
     margin: 0;
   }
 
-  .welcome-title {
-    font-size: 45px;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: auto;
-    padding: 128px 0;
+  .menu > a img {
+    width: 179px;
   }
 
   .trending-section {
@@ -900,7 +916,7 @@ a {
   }
 
   .trending-title::after {
-    margin: 15px auto 40px;
+    margin: 8px auto 27px;
   }
 
   .trending-grid {
@@ -908,20 +924,12 @@ a {
     margin: 0 auto;
   }
 
-  .page {
-    margin-top: 60px;
-  }
-
-  .news:not(:first-child) {
-    margin-top: 60px;
+  .new {
+    margin-top: 20px;
   }
 
   .aside-item:not(:first-child) {
     margin-top: 60px;
-  }
-
-  .new {
-    margin-top: 20px;
   }
 
   .search {
@@ -938,18 +946,33 @@ a {
 @media (min-width: 641px) and (max-width: 1200px) {
   .header {
     background-image: url("../images/banner-bg-tablet.jpg");
+    background-position-y: -1px;
+    height: 392px;
+    margin-bottom: 45px;
+  }
+
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: -1;
   }
 
   .header-wrapper {
-    max-width: 100%;
-    padding: 0 36px;
+    max-width: 768px;
+    padding: 30px 30px;
   }
 
   .burger-menu-toggle {
     display: flex;
     position: absolute;
-    right: 36px;
-    top: 30px;
+    right: 3px;
+    top: 17px;
   }
 
   .header-menu {
@@ -962,16 +985,60 @@ a {
     margin-bottom: 20px;
   }
 
+  .welcome-title {
+    font-size: 40px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: auto;
+    padding: 90px 0;
+  }
+
   .trending-title {
-    font-size: 24px;
+    font-size: 18px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .trending-section {
+    height: 546px;
+  }
+
   .trending-grid {
+    width: 100%;
     gap: 3px;
     max-width: 1200px;
+  }
+
+  .trending-card {
+    width: 100%;
+    max-width: 100%;
+    height: 245px;
+  }
+
+  .page {
+    margin-top: 55px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .card-title-wrap {
+    display: block;
+  }
+
+  .card-content {
+    border: 2px solid #b59f5b;
+    padding: 38px 28px 33px 32px;
+  }
+
+  .trending-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .page-wrapper {
@@ -1002,7 +1069,7 @@ a {
 
   .news-img img {
     width: 100%;
-    height: 290px;
+    height: 300px;
     max-width: 390px;
     object-fit: cover;
   }
@@ -1012,13 +1079,44 @@ a {
   }
 
   .news-name {
-    font-size: 20px;
-    margin-bottom: 37px;
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  .news-text-meta {
+    margin: 0 0 30px 0;
+  }
+
+  .news:not(:first-child) {
+    margin-top: 60px;
   }
 
   .about {
     font-size: 15px;
     margin-top: 0;
+  }
+
+  .about + .about {
+    margin-top: 10px;
+  }
+
+  .aside-item:not(:first-child) {
+    margin-top: 70px;
+  }
+
+  .list-tegs {
+    margin-top: 17px;
+  }
+
+  .top {
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: -3px;
+    font-size: 14px;
+  }
+  
+  .top::after {
+    margin: 5px auto 0;
   }
 
   .aside {
@@ -1031,10 +1129,13 @@ a {
 
   .products-section {
     padding: 50px 36px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .section-title::after {
@@ -1043,19 +1144,21 @@ a {
 
   .products-grid {
     display: grid;
-    grid-template-columns: 334px 334px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 23px;
     row-gap: 32px;
     padding: 0;
     width: 100%;
-    max-width: 100%;
-    justify-content: center;
+    max-width: 720px;
+    margin: 0 auto;
+    /* justify-content: center; */
   }
 
   .product-card {
-    width: 334px;
+    width: 100%;
     max-width: 334px;
     align-items: center;
+    justify-self: center;
   }
 
   .products-grid .product-card:nth-child(3) {
@@ -1065,35 +1168,38 @@ a {
   }
 
   .product-image-wrapper {
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     height: 225px;
     z-index: 1;
   }
 
   .product-image {
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     height: 225px;
   }
 
   .product-content {
-    width: 330px;
-    height: 250px;
-    padding: 20px;
-    padding-top: 45px;
+    width: 100%;
+    max-width: 330px;
+    height: 245px;
+    padding: 15px;
+    padding-top: 40px;
     overflow: hidden;
     z-index: 2;
     margin-top: -25px;
     background: linear-gradient(to bottom, transparent 25px, #fff 25px);
+    box-sizing: border-box;
   }
 
   .product-title {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.2;
   }
 
   .product-description {
     font-size: 15px;
-    line-height: 1.35;
     margin-bottom: 20px;
   }
 
@@ -1107,6 +1213,14 @@ a {
     min-width: 140px;
     padding: 12px 30px;
     font-size: 14px;
+  }
+  .footer-address {
+    background-color: #f4f7f6;
+    max-width: 686px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1126,6 +1240,10 @@ a {
 @media (min-width: 1201px) {
   .header {
     background-image: url("../images/banner-bg.jpg");
+    background-position-y: -1px;
+    height: 450px;
+    margin-bottom: 60px;
+    padding: 30px 0 124px;
   }
 
   .header-wrapper {
@@ -1160,7 +1278,7 @@ a {
   }
 
   .menu-list-item:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 35px;
   }
 
   .menu-link {
@@ -1168,11 +1286,29 @@ a {
     font-size: 13px;
   }
 
+  .welcome-title {
+    font-size: 45px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
+    padding: 105px 0;
+  }
+
   .trending-title {
-    font-size: 28px;
+    font-size: 20px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .card-title-wrap {
+    display: block;
   }
 
   .trending-grid {
@@ -1180,8 +1316,18 @@ a {
     gap: 3px;
   }
 
+  .page {
+    margin-top: 68px;
+  }
+
   .trending-card {
     height: 317px;
+  }
+
+  .trending-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .page-wrapper {
@@ -1220,12 +1366,25 @@ a {
 
   .news-text {
     margin-left: 30px;
-    max-width: 360px;
+    max-width: 365px;
   }
 
   .news-name {
     font-size: 20px;
-    margin-bottom: 37px;
+    margin-bottom: 23px;
+  }
+
+  .news-text-meta {
+    margin: 0 0 43px 0;
+  }
+
+  .news:not(:first-child) {
+    margin-top: 65px;
+  }
+
+  .card-content {
+    border: 2px solid #b59f5b;
+    padding: 40px 16px 30px 40px;
   }
 
   .about {
@@ -1233,7 +1392,7 @@ a {
   }
 
   .about + .about {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .aside {
@@ -1248,12 +1407,8 @@ a {
     margin-top: 60px;
   }
 
-  .new {
-    margin-top: 20px;
-  }
-
   .search {
-    margin-top: 60px;
+    margin-top: 65px;
   }
 
   .products-section {
@@ -1262,17 +1417,17 @@ a {
   }
 
   .section-title {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .section-title::after {
-    margin: 15px auto 0;
+    margin: 10px auto 0;
   }
 
   .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 60px;
     padding: 0 15px;
     max-width: 1200px;
     margin: 0 auto;
@@ -1303,9 +1458,9 @@ a {
   }
 
   .product-content {
-    width: 340px;
-    height: 265px;
-    padding: 25px;
+    width: 345px;
+    height: 260px;
+    padding: 17px;
     padding-top: 50px;
     overflow: visible;
     z-index: 2;
@@ -1329,6 +1484,13 @@ a {
     padding: 12px 30px;
     font-size: 14px;
     margin-left: 0;
+  }
+  .footer-address {
+    max-width: 1167px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

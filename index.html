@@ -14,7 +14,8 @@
           <img src="svg/noemi-logo.svg" alt="логотип NOÉMI" width="179">
         </a>
       <input type="checkbox" id="burger-toggle" class="burger-checkbox">
-      <label for="burger-toggle" class="burger-menu-toggle" aria-label="Открыть меню">
+      <label for="burger-toggle" class="burger-menu-toggle">
+        <span class="hidden">Открыть меню</span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
@@ -58,7 +59,7 @@
                       <span class="card-category">LIFESTYLE</span>
                       <span class="card-category">INTERIOR</span>
                   </div>
-                  <h3 class="card-title">Сейчас в тренде: сад на подоконнике</h3>
+                  <h3 class="card-title">Сейчас в тренде: сад <span class="card-title-wrap">на подоконнике</span></h3>
               </div>
           </div>
       </div>
@@ -128,7 +129,7 @@
               <a class="news-link" href="#0">10 мест, ради которых стоит проснуться на рассвете</a>
             </h2>
             <div class="news-text-meta">
-              <time class="date"> 10 июня 2019</time>
+              <time class="date" datetime="2019-06-10">10 июня 2019</time>
               <span class="author"> Неизвестный автор</span>
             </div>
               <p class="about">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
@@ -157,7 +158,7 @@
             </h2>
 
             <div class="news-text-meta">
-              <time class="date"> 10 июня 2019</time>
+              <time class="date" datetime="2019-06-10">10 июня 2019</time>
               <span class="author"> Неизвестный автор</span>
             </div>
               <p class="about">Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.</p>
@@ -182,7 +183,7 @@
               <a class="news-link" href="#0">Лучшие музыкальные фестивали этого лета</a>
             </h2>
             <div class="news-text-meta">
-              <time class="date"> 10 июня 2019</time>
+              <time class="date" datetime="2019-06-10">10 июня 2019</time>
               <span class="author"> Неизвестный автор</span>
             </div>
               <p class="about">Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
@@ -211,7 +212,7 @@
               <a class="news-link" href="#0">Наукоёмкий подход к кулинарии</a>
             </h2>
             <div class="news-text-meta">
-              <time class="date"> 10 июня 2019</time>
+              <time class="date" datetime="2019-06-10">10 июня 2019</time>
               <span class="author"> Неизвестный автор</span>
             </div>
               <p class="about">Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
@@ -242,7 +243,7 @@
               <a class="news-link" href="#0">делаем модные принты на подушках для интерьера</a>
             </h2>
             <div class="news-text-meta">
-              <time class="date"> 10 июня 2019</time>
+              <time class="date" datetime="2019-06-10">10 июня 2019</time>
               <span class="author"> Неизвестный автор</span>
             </div>
               <p class="about">Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
@@ -260,7 +261,7 @@
           </a>
 
           <div class="new-text">
-            <time class="date"> 14 июня 2019</time>
+            <time class="date" datetime="2019-06-14">14 июня 2019</time>
             <h3 class="new-name">
               <a class="new-link" href="#0">10 мест, ради которых стоит проснуться</a>
             </h3>
@@ -274,7 +275,7 @@
           </a>
 
           <div class="new-text">
-            <time class="date"> 14 июня 2019</time>
+            <time class="date" datetime="2019-06-14">14 июня 2019</time>
             <h3 class="new-name">
               <a class="new-link" href="#0">йога для домашних</a>
             </h3>
@@ -288,7 +289,7 @@
           </a>
 
           <div class="new-text">
-            <time class="date"> 14 июня 2019</time>
+            <time class="date" datetime="2019-06-14">14 июня 2019</time>
             <h3 class="new-name">
               <a class="new-link" href="#0">как мы превратили классное место в балкон</a>
             </h3>
@@ -302,7 +303,7 @@
           </a>
 
           <div class="new-text">
-            <time class="date"> 14 июня 2019</time>
+            <time class="date" datetime="2019-06-14">14 июня 2019</time>
             <h3 class="new-name">
               <a class="new-link" href="#0">Кулинарный подход к науке</a>
             </h3>
@@ -315,7 +316,7 @@
           </a>
 
           <div class="new-text">
-            <time class="date"> 14 июня 2019</time>
+            <time class="date" datetime="2019-06-14">14 июня 2019</time>
             <h3 class="new-name">
               <a class="new-link" href="#0">лучшие прически для распущенных волос</a>
             </h3>
@@ -509,8 +510,8 @@
   <input type="checkbox" id="popup-close-toggle" class="popup-checkbox">
   <label for="popup-close-toggle" class="popup-overlay"></label>
   <div class="popup-content">
-    <label for="popup-close-toggle" class="popup-close" aria-label="Закрыть форму">
-      <img src="svg/form-x.svg" alt="Закрыть">
+    <label for="popup-close-toggle" class="popup-close">
+      <img src="svg/form-x.svg" alt="Закрыть форму">
     </label>
     <h2 class="popup-title">Ваш фидбек</h2>
     <form class="popup-form">
