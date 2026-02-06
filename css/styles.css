@@ -273,9 +273,12 @@ a {
 .trending-card {
   position: relative;
   width: 100%;
-  height: 230px;
+  min-height: 230px;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .trending-card::after {
@@ -289,7 +292,11 @@ a {
 }
 
 .trending-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -298,19 +305,9 @@ a {
   transform: scale(1.05);
 }
 
-@media (max-width: 640px) {
-  .trending-card img {
-    height: 230px;
-  }
-}
-
 .card-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   padding: 30px 20px 15px 20px;
   color: #fff;
 }
@@ -321,8 +318,8 @@ a {
 }
 
 .card-content:hover {
-  border-color: #b59f5b;
-  background: #b59f5b;
+  border-color: #e4d198;
+  background: #e4d198;
 }
 
 .card-categories {
@@ -761,7 +758,7 @@ a {
 
 .product-content {
   width: 330px;
-  height: 235px;
+  min-height: 235px;
   padding: 15px;
   padding-top: 50px;
   border: 3px solid #b59f5b;
@@ -1013,7 +1010,7 @@ a {
   .trending-card {
     width: 100%;
     max-width: 100%;
-    height: 245px;
+    min-height: 245px;
   }
 
   .page {
@@ -1183,10 +1180,10 @@ a {
   .product-content {
     width: 100%;
     max-width: 330px;
-    height: 245px;
+    min-height: 245px;
     padding: 15px;
     padding-top: 40px;
-    overflow: hidden;
+    overflow: visible;
     z-index: 2;
     margin-top: -25px;
     background: linear-gradient(to bottom, transparent 25px, #fff 25px);
@@ -1321,7 +1318,7 @@ a {
   }
 
   .trending-card {
-    height: 317px;
+    min-height: 317px;
   }
 
   .trending-card img {
@@ -1459,7 +1456,7 @@ a {
 
   .product-content {
     width: 345px;
-    height: 260px;
+    min-height: 260px;
     padding: 17px;
     padding-top: 50px;
     overflow: visible;
